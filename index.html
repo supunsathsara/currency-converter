@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="./convert.js"></script>
+    <title>Currency Converter</title>
+  </head>
+  <body>
+    <h1 id="title">Currency Converter</h1>
+    <hr />
+    <div>
+      <form>
+        <label for="amount">Amount</label>
+        <input type="text" id="amount" placeholder="500" />
+        <label for="from">From</label>
+        <input type="text" id="from" placeholder="USD" />
+        <label for="to">To</label>
+        <input type="text" name="to" id="to" placeholder="LKR" />
+        <input type="submit" value="Convert" />
+        <div>
+            <p id="error"></p>
+        </div>
+        <div id="result">
+         <p id="oneequel"></p>
+         <p><span id="total"></span></p>
+        </div>
+        </form>
+   
+        <div>
+        <hr />
+            <p id="last-update"></p>
+            <table id="currency-table">
+                <tr>
+                <th>Currency</th>
+                <th>Rate form USD</th>
+                </tr>
+            
+        </div>
+    </div>
+  </body>
+</html>
