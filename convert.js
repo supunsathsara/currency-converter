@@ -32,9 +32,9 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
   document.querySelector("form").onsubmit = () => {
-    const amount = document.querySelector("#amount").value;
-    const fromCurrency = document.querySelector("#from").value.toUpperCase();
-    const toCurrency = document.querySelector("#to").value.toUpperCase();
+    const amount = document.querySelector("#amount").value.replaceAll("<", "").replaceAll(">", "");
+    const fromCurrency = document.querySelector("#from").value.toUpperCase().replaceAll("<", "").replaceAll(">", "");
+    const toCurrency = document.querySelector("#to").value.toUpperCase().replaceAll("<", "").replaceAll(">", "");
     const url = `https://open.er-api.com/v6/latest/${fromCurrency}`;
     fetch(url)
       .then((response) => response.json())
